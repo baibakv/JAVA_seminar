@@ -64,6 +64,9 @@ public class testclass {
 		
 		System.out.println();
 		
+		float avgGradeFromFunc = calculateAVGGrade(grades);
+		System.out.println("Videja atzime---> " + avgGradeFromFunc);
+		
 		
 		//---------------------STRING PIEMERI----------------------------
 		
@@ -105,6 +108,20 @@ public class testclass {
 		int agei = Integer.parseInt("21");
 		System.out.println("Vecums ir " + agei);
 		
+	}
+	
+	public static float calculateAVGGrade(int []grades) {
+		float result = 0;
+		
+		if(grades != null) {
+			float sum = 0;
+			for(int temp : grades) {
+				sum += temp;
+			}
+			result = sum/grades.length;
+		}
+		
+		return result;
 	}
 
 }
